@@ -271,11 +271,11 @@
 }
 
 - (void)doTapBackView {
-    if(_textFieldArray.count > 0) {
-        for (UITextField * textf in _textFieldArray) {
-            [textf resignFirstResponder];
-        }
-    }
+//    if(_textFieldArray.count > 0) {
+//        for (UITextField * textf in _textFieldArray) {
+//            [textf resignFirstResponder];
+//        }
+//    }
 }
 
 #pragma mark --SETER GETER
@@ -374,9 +374,9 @@
         if (_actionArray.count == 1) {
             [btn mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.and.right.equalTo(_lineBtn);
-                make.top.equalTo(_lineBtn.mas_bottom).offset(LPAdaptiveRate(15));
-                make.height.mas_equalTo(LPAdaptiveRate(19));
-                make.bottom.equalTo(_alertView).offset(LPAdaptiveRate(-15));
+                make.top.equalTo(_lineBtn.mas_bottom).offset(LPAdaptiveRate(10));
+                make.height.mas_equalTo(LPAdaptiveRate(29));
+                make.bottom.equalTo(_alertView).offset(LPAdaptiveRate(-10));
 
             }];
         }else if (_actionArray.count == 2) {
@@ -395,17 +395,17 @@
             if (i == 0) {
                 [btn mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.left.equalTo(_lineBtn);
-                    make.top.equalTo(_lineBtn.mas_bottom).offset(LPAdaptiveRate(15));
-                    make.height.mas_equalTo(LPAdaptiveRate(19));
+                    make.top.equalTo(_lineBtn.mas_bottom).offset(LPAdaptiveRate(10));
+                    make.height.mas_equalTo(LPAdaptiveRate(29));
                     make.right.equalTo(_lineBtn.mas_centerX);
                 }];
             }else{
                 [btn mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.left.equalTo(line);
                     make.right.mas_equalTo(LPAdaptiveRate(0));
-                    make.top.equalTo(_lineBtn.mas_bottom).offset(LPAdaptiveRate(15));
-                    make.height.mas_equalTo(LPAdaptiveRate(19));
-                    make.bottom.equalTo(_alertView).offset(LPAdaptiveRate(-15));
+                    make.top.equalTo(_lineBtn.mas_bottom).offset(LPAdaptiveRate(10));
+                    make.height.mas_equalTo(LPAdaptiveRate(29));
+                    make.bottom.equalTo(_alertView).offset(LPAdaptiveRate(-10));
                 }];
             }
         }else {
@@ -413,14 +413,14 @@
             [btn mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.and.right.equalTo(_lineBtn);
                 if (_lastButton) {
-                    make.top.equalTo(_lastButton.mas_bottom).offset(LPAdaptiveRate(21));
+                    make.top.equalTo(_lastButton.mas_bottom).offset(LPAdaptiveRate(16));
                     
                 }else{
-                    make.top.equalTo(_lineBtn.mas_bottom).offset(LPAdaptiveRate(10));
+                    make.top.equalTo(_lineBtn.mas_bottom).offset(LPAdaptiveRate(5));
                 }
-                make.height.mas_equalTo(LPAdaptiveRate(19));
+                make.height.mas_equalTo(LPAdaptiveRate(29));
                 if (i == _actionArray.count - 1) {
-                    make.bottom.equalTo(_alertView).offset(LPAdaptiveRate(-15));
+                    make.bottom.equalTo(_alertView).offset(LPAdaptiveRate(-10));
                 }
             }];
             
@@ -432,7 +432,7 @@
                 
                 [_lBtn mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.left.and.right.equalTo(_alertView).offset(0);
-                    make.top.equalTo(_lastButton.mas_bottom).offset(LPAdaptiveRate(10));
+                    make.top.equalTo(_lastButton.mas_bottom).offset(LPAdaptiveRate(5));
                     make.height.mas_equalTo(LPAdaptiveRate(1));
                 }];
             }
@@ -459,14 +459,14 @@
 
 - (void)textFieldsValueDidEnd:(UITextField *)textField {
     //NSLog(@"结束");
-    WEAKSELF;
-    [UIView animateWithDuration:0.4
-                     animations:^{
-                         [_alertView mas_updateConstraints:^(MASConstraintMaker *make) {
-                             make.centerY.equalTo(weakSelf).offset(LPAdaptiveRate(-20));
-                         }];
-                     } completion:^(BOOL finished) {
-                     }];
+//    WEAKSELF;
+//    [UIView animateWithDuration:0.4
+//                     animations:^{
+//                         [_alertView mas_updateConstraints:^(MASConstraintMaker *make) {
+//                             make.centerY.equalTo(weakSelf).offset(LPAdaptiveRate(-20));
+//                         }];
+//                     } completion:^(BOOL finished) {
+//                     }];
 }
 
 - (void)textFieldsValueDidEndOnExit:(UITextField *)textField {
