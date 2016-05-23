@@ -22,7 +22,7 @@ Include LPCustomAlertView wherever you need it with #import "LPCustomAlertView.h
     [alert showAlert];
 
 # License
-This code is distributed under the terms and conditions of the MIT license.
+This code is distributed under the terms and conditions of the [MIT license](https://opensource.org/licenses/mit-license.php).
 
 
 
