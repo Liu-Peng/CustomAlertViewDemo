@@ -16,6 +16,7 @@
 		845F96FF1CF299AE009D769F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845F96FD1CF299AE009D769F /* LaunchScreen.storyboard */; };
 		845F970A1CF299AE009D769F /* CustomAlertViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F97091CF299AE009D769F /* CustomAlertViewDemoTests.m */; };
 		845F97151CF299AE009D769F /* CustomAlertViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F97141CF299AE009D769F /* CustomAlertViewDemoUITests.m */; };
+		84E8C72D1CF2ADF20019B90A /* AMTumblrHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E8C72C1CF2ADF20019B90A /* AMTumblrHud.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		845F97101CF299AE009D769F /* CustomAlertViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomAlertViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		845F97141CF299AE009D769F /* CustomAlertViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewDemoUITests.m; sourceTree = "<group>"; };
 		845F97161CF299AE009D769F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E8C72B1CF2ADF20019B90A /* AMTumblrHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMTumblrHud.h; sourceTree = "<group>"; };
+		84E8C72C1CF2ADF20019B90A /* AMTumblrHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTumblrHud.m; sourceTree = "<group>"; };
 		A5AAE6956538127729CBF9A4 /* libPods-CustomAlertViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomAlertViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +119,7 @@
 		845F96EE1CF299AE009D769F /* CustomAlertViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				84E8C72A1CF2ADF20019B90A /* AMTumblrHud */,
 				845F96F21CF299AE009D769F /* AppDelegate.h */,
 				845F96F31CF299AE009D769F /* AppDelegate.m */,
 				845F96F51CF299AE009D769F /* ViewController.h */,
@@ -153,6 +157,15 @@
 				845F97161CF299AE009D769F /* Info.plist */,
 			);
 			path = CustomAlertViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		84E8C72A1CF2ADF20019B90A /* AMTumblrHud */ = {
+			isa = PBXGroup;
+			children = (
+				84E8C72B1CF2ADF20019B90A /* AMTumblrHud.h */,
+				84E8C72C1CF2ADF20019B90A /* AMTumblrHud.m */,
+			);
+			path = AMTumblrHud;
 			sourceTree = "<group>";
 		};
 		C4AF23B7D5E82D5A88CA67D1 /* Pods */ = {
@@ -346,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				845F96F71CF299AE009D769F /* ViewController.m in Sources */,
+				84E8C72D1CF2ADF20019B90A /* AMTumblrHud.m in Sources */,
 				845F96F41CF299AE009D769F /* AppDelegate.m in Sources */,
 				845F96F11CF299AE009D769F /* main.m in Sources */,
 			);
