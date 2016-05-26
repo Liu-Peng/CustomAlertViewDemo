@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13C011481DDDF90C086649AA /* libPods-CustomAlertViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AAE6956538127729CBF9A4 /* libPods-CustomAlertViewDemo.a */; };
+		8429779E1CF6980500897AC4 /* NSString+LPExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8429779D1CF6980500897AC4 /* NSString+LPExtend.m */; };
 		845F96F11CF299AE009D769F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F96F01CF299AE009D769F /* main.m */; };
 		845F96F41CF299AE009D769F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F96F31CF299AE009D769F /* AppDelegate.m */; };
 		845F96F71CF299AE009D769F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F96F61CF299AE009D769F /* ViewController.m */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		216845C7D42F552FF603FAE3 /* Pods-CustomAlertViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomAlertViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomAlertViewDemo/Pods-CustomAlertViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		413DE9ADD88802E4E3CBFFF7 /* Pods-CustomAlertViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomAlertViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomAlertViewDemo/Pods-CustomAlertViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8429779C1CF6980500897AC4 /* NSString+LPExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LPExtend.h"; sourceTree = "<group>"; };
+		8429779D1CF6980500897AC4 /* NSString+LPExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LPExtend.m"; sourceTree = "<group>"; };
 		845F96EC1CF299AE009D769F /* CustomAlertViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlertViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845F96F01CF299AE009D769F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845F96F21CF299AE009D769F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				845F96FD1CF299AE009D769F /* LaunchScreen.storyboard */,
 				845F97001CF299AE009D769F /* Info.plist */,
 				845F96EF1CF299AE009D769F /* Supporting Files */,
+				8429779C1CF6980500897AC4 /* NSString+LPExtend.h */,
+				8429779D1CF6980500897AC4 /* NSString+LPExtend.m */,
 			);
 			path = CustomAlertViewDemo;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				84E8C7311CF2AEA00019B90A /* LPCustomAlertView.m in Sources */,
 				845F96F41CF299AE009D769F /* AppDelegate.m in Sources */,
 				845F96F11CF299AE009D769F /* main.m in Sources */,
+				8429779E1CF6980500897AC4 /* NSString+LPExtend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
