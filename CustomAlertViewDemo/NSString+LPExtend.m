@@ -8,61 +8,31 @@
 
 #import "NSString+LPExtend.h"
 #import <CommonCrypto/CommonCryptor.h>
+#import <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (LPExtend)
 
-#pragma mark --des 加密
-- (NSString *) desEncryptStr:(NSString *)strKey;
-{
-    NSString *ciphertext = nil;
-    const char *textBytes = [self UTF8String];
+#pragma mark --MD5 加密
+- (NSString *) lp_stringFromMD5{
     
-    const char *keyBytes = [strKey cStringUsingEncoding:NSASCIIStringEncoding];
-    NSUInteger dataLength = [self length];
-    unsigned char buffer[1024];
-    memset(buffer, 0, sizeof(char));
-    size_t numBytesEncrypted = 0;
-    CCCryptorStatus cryptStatus = CCCrypt(kCCEncrypt, kCCAlgorithmDES,
-                                          kCCOptionPKCS7Padding ,
-                                          keyBytes, kCCKeySizeDES,
-                                          keyBytes,
-                                          textBytes, dataLength,
-                                          buffer, 1024,
-                                          &numBytesEncrypted);
-    if (cryptStatus == kCCSuccess) {
-        NSData *data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesEncrypted];
-        
-        ciphertext = [[NSString alloc] initWithData:[GTMBase64 encodeData:data] encoding:NSUTF8StringEncoding];
+    if(self == nil || [self length] == 0)
+        return nil;
+    
+    const char *value = [self UTF8String];
+    
+    unsigned char outputBuffer[CC_MD5_DIGEST_LENGTH];
+    
+    // CC_MD5( cStr, strlen(cStr), digest ); 这里的用法明显是错误的，但是不知道为什么依然可以在网络上得以流传。当srcString中包含空字符（\0）时
+    //    CC_MD5( cStr, self.length, digest );
+    
+    CC_MD5(value, strlen(value), outputBuffer);
+    
+    NSMutableString *outputString = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for(NSInteger count = 0; count < CC_MD5_DIGEST_LENGTH; count++){
+        [outputString appendFormat:@"%02x",outputBuffer[count]];
     }
     
-    
-    return ciphertext;
-}
-- (NSString *) desDecryptStr:(NSString *) strKey;
-{
-    NSData* cipherData = [GTMBase64 decodeData:[self dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    const char *keyBytes = [strKey cStringUsingEncoding:NSASCIIStringEncoding];
-    unsigned char buffer[1024];
-    memset(buffer, 0, sizeof(char));
-    size_t numBytesDecrypted = 0;
-    CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt,
-                                          kCCAlgorithmDES,
-                                          kCCOptionPKCS7Padding,
-                                          keyBytes,
-                                          kCCKeySizeDES,
-                                          keyBytes,
-                                          [cipherData bytes],
-                                          [cipherData length],
-                                          buffer,
-                                          1024,
-                                          &numBytesDecrypted);
-    NSString* plainText = nil;
-    if (cryptStatus == kCCSuccess) {
-        NSData* data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesDecrypted];
-        plainText = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    }
-    return plainText;
+    return outputString;
 }
 
 #pragma mark --色值转换
