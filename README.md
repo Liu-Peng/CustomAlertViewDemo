@@ -11,6 +11,10 @@ Open your project in Xcode, then drag and drop LPCustomAlertView.h and LPCustomA
 Include LPCustomAlertView wherever you need it with #import "LPCustomAlertView.h"
 
 Add NSString Extend
+Add NSString Extend
+Add NSString Extend
+Add NSString Extend
+Add NSString Extend
 
 # Usage
     LPCustomAlertView * alert = [LPCustomAlertView alertViewWithTitle:@"测试Title" message:@"测试Message"];
