@@ -25,7 +25,7 @@
     // CC_MD5( cStr, strlen(cStr), digest ); 这里的用法明显是错误的，但是不知道为什么依然可以在网络上得以流传。当srcString中包含空字符（\0）时
     //    CC_MD5( cStr, self.length, digest );
     
-    CC_MD5(value, strlen(value), outputBuffer);
+    CC_MD5(value, (CC_LONG)strlen(value), outputBuffer);
     
     NSMutableString *outputString = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
     for(NSInteger count = 0; count < CC_MD5_DIGEST_LENGTH; count++){
