@@ -8,13 +8,14 @@ Add the LPCustomAlertView.h and LPCustomAlertView.m source files to your project
 
 Download the latest code version or add the repository as a git submodule to your git-tracked project.
 Open your project in Xcode, then drag and drop LPCustomAlertView.h and LPCustomAlertView.m onto your project (use the "Product Navigator view"). Make sure to select Copy items when asked if you extracted the code archive outside of your project.
-Include LPCustomAlertView wherever you need it with #import "LPCustomAlertView.h"
+Include LPCustomAlertView wherever you need it with #import "LPCustomAlertView.h".
 
 Add NSString Extend
 Add NSString Extend
 Add NSString Extend
 Add NSString Extend
 Add NSString Extend
+Add NSString Extend.
 
 # Usage
     LPCustomAlertView * alert = [LPCustomAlertView alertViewWithTitle:@"测试Title" message:@"测试Message"];
